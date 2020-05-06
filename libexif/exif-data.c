@@ -897,7 +897,7 @@ exif_data_load_data (ExifData *data, const unsigned char *d_orig,
 	}
 
 	/* Fixed value */
-	if (exif_get_short (d + 8, data->priv->order) != 0x002a)
+    if (exif_get_long(d + 8, data->priv->order) != 0x002a)
 		return;
 
 	/* IFD 0 offset */
