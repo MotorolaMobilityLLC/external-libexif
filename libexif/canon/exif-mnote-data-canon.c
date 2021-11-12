@@ -382,6 +382,8 @@ exif_mnote_data_canon_new (ExifMem *mem, ExifDataOption o)
 	if (!d)
 		return NULL;
 
+        memset(d, 0, sizeof(ExifMnoteDataCanon));
+
 	exif_mnote_data_construct (d, mem);
 
 	/* Set up function pointers */
